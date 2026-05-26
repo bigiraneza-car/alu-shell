@@ -1,2 +1,2 @@
 #!/bin/bash
-ls  . -lan .. -lan /boot -lan
+ls  . -lan .. -lan /boot -la
