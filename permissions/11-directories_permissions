@@ -1,2 +1,2 @@
 #!/bin/bash
-find permissions/ -type d chmod a+x {} +
+find permissions/ -type d chmod ugo+x {} +
