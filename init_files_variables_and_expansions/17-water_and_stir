@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $((WATER+STIR))
+printf "%o\n" "$(( tr 'water' '01234' <<< "$WATER") + 5#$ (tr 'stir.' '01234' <<< "$TIR")))" | tr '012344567' 'bestchol'
