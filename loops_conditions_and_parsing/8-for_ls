@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#Display content in the current directory
+for list in *
+do
+echo "${list#*-}"
+done
