@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#print numbers 1 to 20 and add specifics phrase after the number 4,9,and 17
+i=1
+while [ $i -le 20 ]
+do
+case $i in 
+     4)
+       printf "$i\nbad luck from China\n"
+       ;;
+     9)
+       printf "$i\nbad luck form Japan\n"
+       ;;
+     17)
+       printf "$i\nbad luck from Italy\n"
+       ;;
+     *)
+       echo "$i"
+esac
+((i++))
+done       
