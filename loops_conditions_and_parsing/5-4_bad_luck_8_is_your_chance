@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#Print loops best school 10 times but display bad luck good luck on 4 & 8 respectively
+i=1
+while [ $i -eq 10 ]
+do
+echo "Best School"
+((i++))
+if [ $i -eq 4 ]; then
+sed -i '4d'
+echo "bad luck"
+elif [ $i -eq 8 ]; then
+sed -i '8d'
+echo "good luck"
+else
+echo""
+fi
+done
