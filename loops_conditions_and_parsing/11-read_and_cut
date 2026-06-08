@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 #display content of the file /etc/passwd
-while IFS=":" read -r username _ uid _ _ home _
+while read -r line
 do
+	username=$(echo "$line" | cut -d: -f1)
+	uid=$(echo "$line" | cut -d: -f3)
+	home=$(echo "$line" | cut -d: -f6)
 	echo "$username:$uid:$home"
 done </etc/passwd
