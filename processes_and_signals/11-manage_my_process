@@ -7,12 +7,12 @@ case "$1" in
 		echo "manage_my_process started"
 		;;
 	stop)
-	        sudo pkill -x manage_my_process
+		kill "$(cat /var/run/my_process.pid)"
 	        sudo rm -f /var/run/my_process.pid
 	        echo "manage_my_process stopped"
 		;;
 	restart)
-	        sudo pkill -x manage_my_process
+		kill "$(cat /var/run/my_process.pid)"
 		sudo rm -f /var/run/my_process.pid
 		./manage_my_process &
 		touch /var/run/my_process.pid
