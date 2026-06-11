@@ -7,13 +7,13 @@ case "$1" in
 		echo "manage_my_process started"
 		;;
 	stop)
-	        pkill -x manage_my_process
-	        rm -f /var/run/my_process.pid
+	        sudo pkill -x manage_my_process
+	        sudo rm -f /var/run/my_process.pid
 	        echo "manage_my_process stopped"
 		;;
 	restart)
-	        pkill -x manage_my_process
-		rm -f /var/run/my_process.pid
+	        sudo pkill -x manage_my_process
+		sudo rm -f /var/run/my_process.pid
 		./manage_my_process &
 		touch /var/run/my_process.pid
 		echo "manage_my_process restarted"
