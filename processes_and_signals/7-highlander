@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#display a phrase indefinitely and print another phrase if interrupted.
+while 'true'
+do 
+   echo "To infinity and beyond"
+   sleep 2
+done
+ trap 'I am invincible!!!' TERM
