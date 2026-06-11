@@ -7,19 +7,19 @@ case "$1" in
 		echo "manage_my_process started"
 		;;
 	stop)
-	        pkill -f manage_my_process
+	        pkill -x manage_my_process
 	        rm -f /var/run/my_process.pid
 	        echo "manage_my_process stopped"
 		;;
 	restart)
-	        pkill -f manage_my_process
+	        pkill -x manage_my_process
 		rm -f /var/run/my_process.pid
 		./manage_my_process &
 		touch /var/run/my_process.pid
 		echo "manage_my_process restarted"
 		;;
 	*)
-	        echo "usage: manage_my_process {start|stop|restart}"
+	        echo "Usage: manage_my_process {start|stop|restart}"
 		exit 1
 		;;
 	esac
