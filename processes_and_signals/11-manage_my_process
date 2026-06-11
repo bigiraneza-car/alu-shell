@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #manages the manage_process file using init.d 
-case $1 in
+case "$1" in
 	start)
 		./manage_my_process &
 		touch /var/run/my_process.pid
